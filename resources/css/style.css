@@ -46,9 +46,15 @@ body{
 }
 
 main{
-    width: 60%;
+    width: 100%;
+    padding-top: 2em;
+    padding-right: 17%;
+    padding-bottom: 2em;
+    padding-left: 17%;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
+    background-color: white;
 }
 
 h3{
@@ -90,11 +96,10 @@ p{
 footer{
     display: flex;
     justify-content: center;
-    margin: 2em auto;
-    padding: 5px;
+    padding: 1em;
     background-color: whitesmoke;
     color: black;
-    width: 70%;
+    width: 100%;
 }
 
 /*nav.link pseudo-selectors*/
