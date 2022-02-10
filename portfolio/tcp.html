@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The TCP Three-Way Handshake Explained</title>
+        <style>
+/* From extension vscode.github */
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+    display: none;
+}
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <p><strong>Meta description:</strong> The Transmission Control Protocol (TCP) is a connection-oriented protocol that uses the three-way handshake to transmit and receive data.</p>
+<h1 id="the-tcp-three-way-handshake-explained">The TCP Three-Way Handshake Explained</h1>
+<p>The Transmission Control Protocol/Internet Protocol (TCP/IP) is the most widely used internet connectivity protocol. It enables the communication of data between computers across a transmission medium.</p>
+<p>TCP/IP paired with Hypertext Transfer Protocol (HTTP) has revolutionized the way we do things, allowing for information to be passed nearly instantaneously around the world. The internet as we know it (mostly in web browsers) is possible via the network connection created by the TCP three-way handshake. So, let's look into what it’s all about.</p>
+<pre><code class="language-TCP/IP"><code><div>TCP: ....., seq: #, ack: #, win: #, src: # dst: # 
+
+TCP: Source Port = CLIENT/SERVER
+ TCP: Destination Port = SERVER/CLIENT
+ TCP: Sequence Number = #
+ TCP: Acknowledgement Number = #
+ TCP: Data Offset = #
+ TCP: Reserved = #
+ TCP: Flags = #
+
+TCP: ..0..... = No urgent data
+ TCP: ...0.... = Acknowledgement field not significant
+ TCP: ....0... = No Push function
+ TCP: .....0.. = No Reset
+ TCP: ......1. = Synchronize sequence numbers
+ TCP: .......0 = No Fin
+
+TCP: Window = #
+ TCP: Checksum = #
+ TCP: Urgent Pointer = #
+ TCP: Options
+
+TCP: Frame Padding
+</div></code></code></pre>
+<h2 id="what-is-tcpip">What is TCP/IP?</h2>
+<p>The TCP/IP model is a four-layer protocol stack supporting computer networking and connections. It is an internet protocol suite important for defining how data is processed, transmitted, and received.</p>
+<p>The model is divided into the following layers, each performing specific duties:</p>
+<ul>
+<li>Application layer</li>
+<li>Transport layer</li>
+<li>Internet layer</li>
+<li>Network Access layer</li>
+</ul>
+<p>The Transport layer is an interface for network applications that allows for error checking, flow control, and verification of communications. Data from an application program interface (at the Application layer) passes to the Transport layer and then to the Transmission Control Protocol (TCP). The protocol creates the connection between a client and server via the three-way handshake.</p>
+<ul>
+<li>A client is a computer requesting services from another computer on a network.</li>
+<li>A server is a computer offering services to other computers on a network.</li>
+</ul>
+<h2 id="what-is-the-transmission-control-protocol-tcp">What is the Transmission Control Protocol (TCP)?</h2>
+<p>The Transmission Control Protocol (TCP) is a reliable connection-oriented protocol. A connection-oriented protocol begins, maintains/monitors, and ends a connection between two computers.</p>
+<h3 id="features-of-tcp">Features of TCP</h3>
+<p>TCP processes data via Stream-oriented Processing, which means that it accepts a byte of data at a time and formats it into segments. A segment is a data package encapsulating the entire Application layer message. If the data message arrives out of order, TCP can resequence the data to restore to the original order.</p>
+<p>A TCP connection is full-duplex. Data can flow independently in each direction (from client to server). The sending machine records status information to ensure delivery. Every data package sent across the network receives an acknowledgment from the receiving computer. A data segment is formatted into 13 distinct parts, appearing below in the chart and above in the example display of TCP status info.</p>
+<hr>
+<dl>
+<dt>Source Port (16-bit)</dt>
+<dd>Port number of the application on the sending machine</dd>
+<dt>Destination Port (16-bit)</dt>
+<dd>Port number of the application on the receiving machine</dd>
+<dt>Sequence Number (32-bit)</dt>
+<dd>The byte number of the first byte of data in the TCP packet sent</dd>
+<dt>Acknowledgment Number (32-bit)</dt> 	<dd>Acknowledges a received segment - the value +1 of the number the receiving computer expects to receive.</dd> 
+<dt>Data Offset (4-bit)</dt>
+<dd>Tells receiving machine where the data begins</dd>
+<dt>Reserved (6-bit)</dt>	
+<dd>Reserved for future development</dd>
+<dt>Control flags (1-bit each)</dt>	
+    <ul>
+    <dt>URG</dt>	
+    <dd>Urgent pointer field</dd>
+    <dt>ACK</dt>
+    <dd>Acknowledgment</dd>
+    <dt>PSH<dt>
+    <dd>Push all data to the receiving application</dd>
+    <dt>RST<dt>
+    <dd>Reset connection</dd>
+    <dt>SYN<dt>	
+    <dd>Synchronization request (used to open a connection)</dd>
+    <dt>FIN</dt>
+    <dd>A sending computer has no more data to transmit (used to close connection)</dd>
+    </ul>
+<dt>Window (16-bit)</dt> 	
+<dd>The range of sequence numbers beyond the last acknowledged sequence number that the sending machine can transmit without further acknowledgment. (control flow)</dd>
+<dt>Checksum (16-bit)</dt>	
+<dd>Checks for corruption in the datagram</dd>
+<dt>Urgent Pointer (16-bit)</dt>	
+<dd>Urgent information point in sequence number</dd>
+<dt>Options</dt>	
+<dd>Optional settings</dd>
+<dt>Padding</dt>	
+<dd>Ensures 32-bit boundary</dd>
+<dt>Data</dt>	
+<dd>Additional data being transmitted with the segment</dd>
+</dl>
+<hr>
+<h2 id="what-is-a-tcp-three-way-handshake">What is a TCP three-way handshake?</h2>
+<p>In order to start a TCP connection, a three-way handshake must occur. This is accomplished by a sequence/acknowledgment system where the client and server synchronize their sequence numbers. A network connection is made between client and server in three steps (a.k.a. handshakes).</p>
+<h3 id="establishing-a-connection">Establishing a connection</h3>
+<h4 id="step-1">Step 1</h4>
+<p>The client sends a segment to the server. The data segment includes the <code>SYN</code> number, <code>ACK</code> number, and client’s ISN (initial sequence number). The <code>SYN</code> is a synchronization request, and the <code>ACK</code> states the current value of the acknowledgment sequence. If a connection is being made for the first time, then <code>ACK</code> starts at 0.</p>
+<h4 id="step-2">Step 2</h4>
+<p>The server receives the client’s segment. In response, the server sends back an <code>ACK</code> that is +1 in value from the client’s ISN number received, acknowledging the sequence number. Additionally, a request <code>SYN</code> is sent from the server, along with its ISN, to the client.</p>
+<h4 id="step-3">Step 3</h4>
+<p>The client receives the server’s request for synchronization and responds with a segment that contains an <code>ACK</code> to acknowledge receipt of the server’s ISN, and the connection is established.</p>
+<h3 id="connection">Connection</h3>
+<p>Once the TCP three-way handshake is made, the data segment is then passed to the Internet layer. At this layer, IP provides logical-addressing info, encloses data into a datagram, and provides routing to support delivery across the interconnected network. Finally, at the Network Access layer, which provides an interface, a datagram is received and formatted into a frame. The frame is then converted into a bitstream that is transmitted over the network medium.</p>
+<h3 id="terminating-a-connection">Terminating a connection</h3>
+<h4 id="step-1-1">Step 1</h4>
+<p>The client sends a segment containing a <code>FIN</code> value set to 1. The client application then enters fin-wait state, which allows it to continue to receive and process segments in the queue. However, no additional data is transmitted.</p>
+<h4 id="step-2-1">Step 2</h4>
+<p>Then, the server sends <code>ACK</code> back to the client, which acknowledges receipt of the <code>FIN</code>, and sends any remaining segments.</p>
+<h4 id="step-3-1">Step 3</h4>
+<p>The server notifies the local application that a <code>FIN</code> segment has been received and then transmits <code>FIN</code> to the client, signaling the connection’s close.</p>
+<h4 id="step-4">Step 4</h4>
+<p>Once received, the client sends <code>ACK</code> to the server, acknowledging receipt of <code>FIN</code>, and the connection gracefully closes.</p>
+<h2 id="summary">Summary</h2>
+<p>For the World Wide Web, “clients” are web browsers that connect to web servers and present data in a predetermined format. The web server communicates using HTTP. After a TCP connection is made, the browser uses HTTP commands to request a web page URL, which ultimately results in what you see on the screen made with HTML, CSS, and JavaScript.</p>
+<p>So, what is a TCP three-way handshake? Well, it is what makes all this possible. It is a graceful connection-oriented protocol to establish, maintain/monitor, and terminate network connections reliably between two computers. You can learn more with <a href="https://www.codecademy.com/catalog">our courses</a>.</p>
+
+    </body>
+    </html>
