@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>What is PostgreSQL&quest;</title>
-        <style>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>What is PostgreSQL&quest;</title>
+<style>
 /* From extension vscode.github */
 .vscode-dark img[src$=\#gh-light-mode-only],
 .vscode-light img[src$=\#gh-dark-mode-only] {
@@ -11,29 +11,30 @@
 }
 
 .katex-error {
-	color: var(--vscode-editorError-foreground);
+    color: var(--vscode-editorError-foreground);
 }
-
-</style>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+</style>  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    width: 50%;
+    min-width: 420px;
+    margin: 0 auto;
+    background-color: white;
+}
+</style>
+<style>
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
-        
-        
-        
-    </head>
-    <body class="vscode-body vscode-light">
-        <p><strong>Meta Description:</strong> PostgreSQL is an open-source Object-Relational Database Management System (ORDBMS) capable of enterprise-level data control with SQL support.</p>
+</head>
+
+<body class="vscode-body vscode-light">
+<article>
+<p><strong>Meta Description:</strong> PostgreSQL is an open-source Object-Relational Database Management System (ORDBMS) capable of enterprise-level data control with SQL support.</p>
 <h1 id="what-is-postgresql">What is PostgreSQL?</h1>
 <p>PostgreSQL, pronounced “Postgres Q L” (or just Postgres, for short), is an open-source Object-Relational Database Management System (ORDBMS). Postgres is primarily based on the relational database model. However, it supports object-oriented model features. It is often referred to as an RDBMS for this reason.</p>
 <ul>
@@ -61,8 +62,8 @@
 <p>Postgres mostly conforms to Standard Query Language (SQL) syntax, although it differs in some areas to preserve critical features. <a href="https://www.codecademy.com/resources/blog/what-is-sql/">SQL</a> is simply a programming language used to manage relational databases. This is where the difference between SQL and PostgreSQL becomes clear: Postgres is an application that manages databases by implementing SQL commands. Previous versions of Postgres used the PostQUEL language.</p>
 <pre><code class="language-SQL"><div>//creating a new table 
 <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> participant (
-	first_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">80</span>), 
-	last_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">80</span>),
+first_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">80</span>), 
+last_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">80</span>),
 );
 </div></code></pre>
 <p>The above example shows how to create a table with SQL in Postgres. Here, the name of the table is <code>participant</code>. The column names are <code>first_name</code> and <code>last_name</code>, while <code>varchar(80)</code> specifies the column type. So, in this example, both column types allow for a string of 80 characters.</p>
@@ -98,6 +99,6 @@ Bob        | Ross
 <h2 id="continue-learning">Continue learning</h2>
 <p>Learn how to <a href="https://www.codecademy.com/articles/installing-and-using-postgresql-locally">install and use PostgreSQL</a> with our extensive range of courses. PostgreSQL works on macOS, Windows, and Linux. For more comprehensive coverage of the ORDBMS, we have <a href="https://www.codecademy.com/learn/paths/design-databases-with-postgresql">beginner-friendly courses</a>, which you can try for free. After installing, one example of a free project you can take on is <a href="https://www.codecademy.com/paths/design-databases-with-postgresql/tracks/what-is-a-database/modules/using-postgresql-on-your-own-computer/informationals/off-platform-project-making-a-database-of-movies">making a database of movies</a> with our off-platform path project.</p>
 <p>When a programmer selects a DBMS to use, they must first consider all available types based on capabilities. Other types of DBMS include distributed, hierarchical, and network. Relational DBMSs, however, are a popular option for programmers because they have a friendly user interface, and SQL is easy to learn for beginners. PostgreSQL offers the perks of a relational DBMS and additionally has object-oriented features thrown in. You can browse our <a href="https://www.codecademy.com/catalog">complete catalog</a> to find comprehensive courses that will help you manage datasets.</p>
-
-    </body>
-    </html>
+</article>
+</body>
+</html>

@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>The TCP Three-Way Handshake Explained</title>
-        <style>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The TCP Three-Way Handshake Explained</title>
+<style>
 /* From extension vscode.github */
 .vscode-dark img[src$=\#gh-light-mode-only],
 .vscode-light img[src$=\#gh-dark-mode-only] {
-    display: none;
+display: none;
 }
 
 .katex-error {
-	color: var(--vscode-editorError-foreground);
+color: var(--vscode-editorError-foreground);
 }
 
 </style>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        width: 50%;
+        min-width: 420px;
+        margin: 0 auto;
+        background-color: white;
+        }
+</style>
+<style>
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
-        
-        
-        
-    </head>
-    <body class="vscode-body vscode-light">
-        <p><strong>Meta description:</strong> The Transmission Control Protocol (TCP) is a connection-oriented protocol that uses the three-way handshake to transmit and receive data.</p>
+</head>
+<body class="vscode-body vscode-light">
+<article>
+<p><strong>Meta description:</strong> The Transmission Control Protocol (TCP) is a connection-oriented protocol that uses the three-way handshake to transmit and receive data.</p>
 <h1 id="the-tcp-three-way-handshake-explained">The TCP Three-Way Handshake Explained</h1>
 <p>The Transmission Control Protocol/Internet Protocol (TCP/IP) is the most widely used internet connectivity protocol. It enables the communication of data between computers across a transmission medium.</p>
 <p>TCP/IP paired with Hypertext Transfer Protocol (HTTP) has revolutionized the way we do things, allowing for information to be passed nearly instantaneously around the world. The internet as we know it (mostly in web browsers) is possible via the network connection created by the TCP three-way handshake. So, let's look into what it’s all about.</p>
 <pre><code class="language-TCP/IP"><code><div>TCP: ....., seq: #, ack: #, win: #, src: # dst: # 
 
 TCP: Source Port = CLIENT/SERVER
- TCP: Destination Port = SERVER/CLIENT
- TCP: Sequence Number = #
- TCP: Acknowledgement Number = #
- TCP: Data Offset = #
- TCP: Reserved = #
- TCP: Flags = #
+TCP: Destination Port = SERVER/CLIENT
+TCP: Sequence Number = #
+TCP: Acknowledgement Number = #
+TCP: Data Offset = #
+TCP: Reserved = #
+TCP: Flags = #
 
 TCP: ..0..... = No urgent data
- TCP: ...0.... = Acknowledgement field not significant
- TCP: ....0... = No Push function
- TCP: .....0.. = No Reset
- TCP: ......1. = Synchronize sequence numbers
- TCP: .......0 = No Fin
+TCP: ...0.... = Acknowledgement field not significant
+TCP: ....0... = No Push function
+TCP: .....0.. = No Reset
+TCP: ......1. = Synchronize sequence numbers
+TCP: .......0 = No Fin
 
 TCP: Window = #
- TCP: Checksum = #
- TCP: Urgent Pointer = #
- TCP: Options
+TCP: Checksum = #
+TCP: Urgent Pointer = #
+TCP: Options
 
 TCP: Frame Padding
 </div></code></code></pre>
@@ -94,20 +96,20 @@ TCP: Frame Padding
 <dt>Reserved (6-bit)</dt>	
 <dd>Reserved for future development</dd>
 <dt>Control flags (1-bit each)</dt>	
-    <ul>
-    <dt>URG</dt>	
-    <dd>Urgent pointer field</dd>
-    <dt>ACK</dt>
-    <dd>Acknowledgment</dd>
-    <dt>PSH<dt>
-    <dd>Push all data to the receiving application</dd>
-    <dt>RST<dt>
-    <dd>Reset connection</dd>
-    <dt>SYN<dt>	
-    <dd>Synchronization request (used to open a connection)</dd>
-    <dt>FIN</dt>
-    <dd>A sending computer has no more data to transmit (used to close connection)</dd>
-    </ul>
+<ul>
+<dt>URG</dt>	
+<dd>Urgent pointer field</dd>
+<dt>ACK</dt>
+<dd>Acknowledgment</dd>
+<dt>PSH<dt>
+<dd>Push all data to the receiving application</dd>
+<dt>RST<dt>
+<dd>Reset connection</dd>
+<dt>SYN<dt>	
+<dd>Synchronization request (used to open a connection)</dd>
+<dt>FIN</dt>
+<dd>A sending computer has no more data to transmit (used to close connection)</dd>
+</ul>
 <dt>Window (16-bit)</dt> 	
 <dd>The range of sequence numbers beyond the last acknowledged sequence number that the sending machine can transmit without further acknowledgment. (control flow)</dd>
 <dt>Checksum (16-bit)</dt>	
@@ -145,6 +147,6 @@ TCP: Frame Padding
 <h2 id="summary">Summary</h2>
 <p>For the World Wide Web, “clients” are web browsers that connect to web servers and present data in a predetermined format. The web server communicates using HTTP. After a TCP connection is made, the browser uses HTTP commands to request a web page URL, which ultimately results in what you see on the screen made with HTML, CSS, and JavaScript.</p>
 <p>So, what is a TCP three-way handshake? Well, it is what makes all this possible. It is a graceful connection-oriented protocol to establish, maintain/monitor, and terminate network connections reliably between two computers. You can learn more with <a href="https://www.codecademy.com/catalog">our courses</a>.</p>
-
-    </body>
-    </html>
+</article>
+</body>
+</html>
