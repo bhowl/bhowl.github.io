@@ -34,11 +34,20 @@ body{
     margin: 0 auto;
 }
 
+p{
+    font-size: 14px;
+}
+
+h2{
+    font-size: 19px;
+}
+
 h3{
     display: block;
     height: 1.5em;
     color: black;
     background-color: whitesmoke;
+    font-size: 18px;
 }
 
 ul{
@@ -47,10 +56,12 @@ ul{
 
 strong{
     color: rgba(71, 71, 71, 0.904);
+    font-size: 16px;
 }
 
 li{
     line-height: 1.5em;
+    font-size: 14px;
 }
 
 footer{
