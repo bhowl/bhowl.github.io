@@ -82,43 +82,44 @@ TCP: Frame Padding
 <p>A TCP connection is full-duplex. Data can flow independently in each direction (from client to server). The sending machine records status information to ensure delivery. Every data package sent across the network receives an acknowledgment from the receiving computer. A data segment is formatted into 13 distinct parts, appearing below in the chart and above in the example display of TCP status info.</p>
 <hr>
 <dl>
-<dt>Source Port (16-bit)</dt>
+<dt><strong>Source Port (16-bit)</strong></dt>
 <dd>Port number of the application on the sending machine</dd>
-<dt>Destination Port (16-bit)</dt>
+<dt><strong>Destination Port (16-bit)</strong></dt>
 <dd>Port number of the application on the receiving machine</dd>
-<dt>Sequence Number (32-bit)</dt>
+<dt><strong>Sequence Number (32-bit)</strong></dt>
 <dd>The byte number of the first byte of data in the TCP packet sent</dd>
-<dt>Acknowledgment Number (32-bit)</dt> 	<dd>Acknowledges a received segment - the value +1 of the number the receiving computer expects to receive.</dd> 
-<dt>Data Offset (4-bit)</dt>
+<dt><strong>Acknowledgment Number (32-bit)</strong></dt> 	
+<dd>Acknowledges a received segment - the value +1 of the number the receiving computer expects to receive.</dd> 
+<dt><strong>Data Offset (4-bit)</strong></dt>
 <dd>Tells receiving machine where the data begins</dd>
-<dt>Reserved (6-bit)</dt>	
+<dt><strong>Reserved (6-bit)</strong></dt>	
 <dd>Reserved for future development</dd>
-<dt>Control flags (1-bit each)</dt>	
+<dt><strong>Control flags (1-bit each)</strong></dt>	
 <ul>
-<dt>URG</dt>	
+<dt><strong>URG</strong></dt>	
 <dd>Urgent pointer field</dd>
-<dt>ACK</dt>
+<dt><strong>ACK</strong></dt>
 <dd>Acknowledgment</dd>
-<dt>PSH<dt>
+<dt><strong>PSH</strong><dt>
 <dd>Push all data to the receiving application</dd>
-<dt>RST<dt>
+<dt><strong>RST</strong><dt>
 <dd>Reset connection</dd>
-<dt>SYN<dt>	
+<dt><strong>SYN</strong><dt>	
 <dd>Synchronization request (used to open a connection)</dd>
-<dt>FIN</dt>
+<dt><strong>FIN</strong></dt>
 <dd>A sending computer has no more data to transmit (used to close connection)</dd>
 </ul>
-<dt>Window (16-bit)</dt> 	
+<dt><strong>Window (16-bit)</strong></dt> 	
 <dd>The range of sequence numbers beyond the last acknowledged sequence number that the sending machine can transmit without further acknowledgment. (control flow)</dd>
-<dt>Checksum (16-bit)</dt>	
+<dt><strong>Checksum (16-bit)</strong></dt>	
 <dd>Checks for corruption in the datagram</dd>
-<dt>Urgent Pointer (16-bit)</dt>	
+<dt><strong>Urgent Pointer (16-bit)</strong></dt>	
 <dd>Urgent information point in sequence number</dd>
-<dt>Options</dt>	
+<dt><strong>Options</strong></dt>	
 <dd>Optional settings</dd>
-<dt>Padding</dt>	
+<dt><strong>Padding</strong></dt>	
 <dd>Ensures 32-bit boundary</dd>
-<dt>Data</dt>	
+<dt><strong>Data</strong></dt>	
 <dd>Additional data being transmitted with the segment</dd>
 </dl>
 <hr>
