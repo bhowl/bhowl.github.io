@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>What is the Java Development Kit &lpar;JDK&rpar;&quest;</title>
+        <style>
+/* From extension vscode.github */
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+    display: none;
+}
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <p><strong>Meta Description:</strong> What is JDK? Java Standard Edition Development Kit for building programs with the Java programming language.</p>
+<h1 id="what-is-the-java-development-kit-jdk">What is the Java Development Kit (JDK)?</h1>
+<p>When someone downloads Java, they are downloading a Java Development Kit (JDK). The kit includes pre-built code packages, modules, infrastructure, and documentation essential for Java programming.</p>
+<p>Java Dev Kits provides the tools necessary for developing, testing, and monitoring Java programs written in the Java programming language and running on the Java platform. Admittedly, some Java documentation can get confusing because some things can seem conflicting, and there are so many Java acronyms: Java this, Java that.</p>
+<p>The Java community is well known for being very active and helpful to their fellow counterparts. However, you’ll run into documents that have grammatical errors or are left unfinished. Documents get created and are then seemingly left by the wayside. We try to help remove the time-consuming legwork of finding reliable resources. Consider trying out our courses as you continue to <a href="https://www.codecademy.com/learn/learn-java">learn Java</a>. Herein we will work through explaining what JDK is.</p>
+<h2 id="java-standard-edition-java-se">Java standard edition (Java SE)</h2>
+<p>First, there’s Java SE, which lets you develop and deploy Java applications on desktops and servers. Java technology encompasses both a programming language and a platform. When you download an implementation of Java SE, you will be downloading both of these. When installing a JDK implementation, you will likely want to download the most recent version, JDK 17.</p>
+<p>OracleJDK and OpenJDK are the two types of JDK software being updated by development teams today. The former is a commercial build, updated by Oracle. Whereas the latter is an open-source project with Oracle and IBM teams helping things run smoothly.</p>
+<h2 id="oraclejdk"><a href="https://www.oracle.com/java/technologies/downloads/#jdk17-linux">OracleJDK</a></h2>
+<p>In the OracleJDK link, you will notice that the download is for Java™ Platform, Standard Edition Development Kit (JDK™). The Java Platform is necessary for executing code. “The JDK is a development environment for building applications and components using the Java programming language.” - OracleJDK.</p>
+<p>Business subscriptions are available with the OracleJDK. The perks are entitlement to GraalVM enterprise, Java Management Service, and bundled patch releases (BRPs).</p>
+<h2 id="openjdk"><a href="https://jdk.java.net/17/">OpenJDK</a></h2>
+<p>The open-source version of JDK17 also has an implementation of the Java SE platform. This version of the dev kit has new features for macOS, applet API, and Vector API (among others). On this site, JDK 18 is available for early-access download.</p>
+<h2 id="java-programming-language">Java programming language</h2>
+<p>To better understand what the JDK is, it’s important to know the steps taken from writing to running a Java application.</p>
+<ol>
+<li>First, source code is written in a text editor with the <code>.java</code> extension.</li>
+<li>Then, the source code is compiled into <code>.class</code> binary files. A compiler translates the code within the text editor into bytecode which is similar to the machine code that computer hardware uses to function.</li>
+<li>Lastly, the code is executed (ran) using a Java launcher tool, which accomplishes this via the Java Virtual Machine (JVM) instance.</li>
+</ol>
+<p>These steps are, in part, what makes Java a dynamic programming language. Because after compiling, JVM instances can run the bytecode for the same application on many different platforms: Linux, Windows, Solaris, etc.</p>
+<p>This is why the Java slogan is “write once, run everywhere” because when applications are written and then compiled into bytecode, they can run on any platform. We write more about this in our blog: <a href="https://www.codecademy.com/resources/blog/what-is-java-used-for/">What is Java used for?</a></p>
+<h2 id="java-platform">Java platform</h2>
+<p>Java SE includes a JDK and a Java Runtime Environment (JRE). As we start gaining a better understanding of what JDK is, we should also cover JRE. So, what is JRE?</p>
+<blockquote>
+<p>“The JRE provides the libraries, Java virtual machine, and other components necessary for you to run applets and applications written in the Java programming language. This runtime environment can be redistributed with applications to make them free-standing.” - <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/index.html">Java Documentation</a></p>
+</blockquote>
+<p>So, the JRE runs the bytecode via the JVM instance. Another component of the Java Platform is the Java Application Programming Interface (API). That’s yet another Java acronym to learn. What is Java API?</p>
+<blockquote>
+<p>“The API is a large collection of ready-made software components that provide many useful capabilities. It is grouped into libraries of related classes and interfaces; these libraries are known as packages.” - <a href="https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html">Java Tutorials</a></p>
+</blockquote>
+<h2 id="jdk-contents-and-tools">JDK Contents and Tools</h2>
+<p>Now let’s look at some specific JDK components that you will be able to use after installing the JDK. Along with these tools, there will be extra utilities, documentation, and other basic tools. The contents table shows the available files and directories included in the JDKs. The tools table goes a little further and shows specific components within the contents.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Executables</td>
+</tr>
+<tr>
+<td style="text-align:left">Configuration files</td>
+</tr>
+<tr>
+<td style="text-align:left">C header files</td>
+</tr>
+<tr>
+<td style="text-align:left">Compiled Java modules</td>
+</tr>
+<tr>
+<td style="text-align:left">Copyright and License modules</td>
+</tr>
+<tr>
+<td style="text-align:left">Additional libraries</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Debugger Architecture</td>
+</tr>
+<tr>
+<td style="text-align:left">VM Tool Interface</td>
+</tr>
+<tr>
+<td style="text-align:left">Javadoc Tool</td>
+</tr>
+<tr>
+<td style="text-align:left">Dynamic Attach</td>
+</tr>
+<tr>
+<td style="text-align:left">Console API</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary-what-is-jdk">Summary: what is JDK?</h2>
+<p>Java is a versatile, compatible language. It has been used for software development, mobile applications, and large system development. When downloading Java, you can choose the JDK you prefer. Recent JDKs include the JRE and contain other tools important for creating Java programs, such as the Java compiler. Additionally, JDK provides the tools to test and update Java applications with ease. Here are the important acronyms to remember discussed in this blog:</p>
+<ul>
+<li>Java SE</li>
+<li>JDK</li>
+<li>JVM</li>
+<li>JRE</li>
+<li>Java API</li>
+</ul>
+<p>And here is one last one: IDE, which means Integrated Development Environment. Essentially, an IDE combines the text editor and compiler into one language. Eclipse and Visual Studio are popular IDEs for Java. However, even when using an IDE, you will need JDK installed.</p>
+<p>You can read more about Java in our more in-depth <a href="https://www.codecademy.com/articles">articles</a>. For Java practice, our <a href="https://www.codecademy.com/learn/learn-java">Learn Java</a> course is the move. It doesn’t require any prerequisites. It takes 25 hours to complete key takeaway skills in object-oriented programming languages (OOP) fundamentals. During the course, which you can try for free, you’ll build 7 Java projects. If you have our <a href="https://www.codecademy.com/pro/membership">Pro</a> membership, you can earn certification for completing the course.</p>
+
+    </body>
+    </html>
