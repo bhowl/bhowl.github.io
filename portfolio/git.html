@@ -42,19 +42,19 @@
 <h2 id="git-interview-questions-and-answers">Git interview questions and answers</h2>
 <p>Almost every development team depends on Git for version control. It's the industry standard for tracking changes in any set of files. However, not every developer utilizes the software as intended — even experienced programmers! So, one of the most beneficial things you (as a candidate) can do in an interview regarding Git, is show that you have the know-how of working with it regularly. Committing regularly. As long as you exemplify some Git best practices, you should have no problem getting through that portion of the interview.</p>
 <p>Let’s review 15 questions and think about the proper answers.</p>
-<h3 id="question-1-what-are-branches-what-command-creates-a-new-branch">Question 1: What are branches? What command creates a new branch?</h3>
+<h2 id="question-1-what-are-branches-what-command-creates-a-new-branch">Question 1: What are branches? What command creates a new branch?</h2>
 <p><code>C1 - - - C2 - - - C3</code></p>
 <p>Above is an example of simple commit history, in which <code>C1</code> is the first commit (version), <code>C2</code> is the second commit, and <code>C3</code> is the third commit. This is an example of a <code>main</code> branch. Any new branches that get created are called the <code>feature</code> branch.</p>
 <p>To create a new branch, we use the <code>git branch</code> command, and to view it, we use the <code>git checkout</code> command.</p>
-<h3 id="question-2-how-often-do-you-commit-when-using-git-and-do-you-review-files-before-committing">Question 2: How often do you commit when using Git? And do you review files before committing?</h3>
+<h2 id="question-2-how-often-do-you-commit-when-using-git-and-do-you-review-files-before-committing">Question 2: How often do you commit when using Git? And do you review files before committing?</h2>
 <p>You should be committing regularly. If you don’t know when to commit, just make a routine of it. For example, commit every Friday at the end of the week, and remember to leave a detailed message.</p>
-<h3 id="question-3-what-are-your-best-practices-for-writing-commit-messages">Question 3: What are your best practices for writing commit messages?</h3>
+<h2 id="question-3-what-are-your-best-practices-for-writing-commit-messages">Question 3: What are your best practices for writing commit messages?</h2>
 <p>It's a good idea to have consistency across your commit messages. Following a template for each message within a project is one of the best practices for writing commits. It allows you to quickly identify and get some detail about the commit without needing to do extra searching.</p>
-<h3 id="question-4-whats-the-difference-between-git-merge-and-git-rebase-which-method-do-you-prefer">Question 4: What's the difference between git merge and git rebase? Which method do you prefer?</h3>
+<h2 id="question-4-whats-the-difference-between-git-merge-and-git-rebase-which-method-do-you-prefer">Question 4: What's the difference between git merge and git rebase? Which method do you prefer?</h2>
 <p>The two commands allow developers to incorporate changes from one branch into another. Merge allows for the creation of a new &quot;merge commit&quot; occurring between the <code>main</code> and <code>feature</code> commit. The command joins the two (or more if needed) together. For example, <code>git merge</code> will add changes to the current branch. Whereas <code>git rebase</code> can reapply the feature commit on top of the main branch.</p>
 <p>So the major difference between the two is how the history gets managed. With <code>git merge</code>, the history of branches remains the same but can subsequently leave clutter from unnecessary old commits. And with rebase, the <code>main</code> history is partially forfeited in favor of the <code>feature</code> history.</p>
 <p>As for answering which technique is your preference, there is no correct answer — just as long as you can prove your point. However, there is some scrutiny with rebasing when working in large teams because you may inadvertently rewrite public commits. Nevertheless, both methods can be effective as long as you know what you’re doing. Look into the &quot;golden rule of rebasing&quot; for more info on this.</p>
-<h3 id="question-5-what-is-the-difference-between-git-and-github">Question 5: What is the difference between Git and Github?</h3>
+<h2 id="question-5-what-is-the-difference-between-git-and-github">Question 5: What is the difference between Git and Github?</h2>
 <p>To answer this interview question, we quote our <a href="https://www.codecademy.com/articles">Articles</a> resources, which provide a more in-depth overview of programming concepts. Like this article on <a href="https://www.codecademy.com/article/what-is-git-and-github-desktop">Getting Started with Git and GitHub Desktop</a>.</p>
 <ul>
 <li>
@@ -68,40 +68,40 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="question-6-do-you-use-the-command-line-with-git">Question 6: Do you use the command line with Git?</h3>
+<h2 id="question-6-do-you-use-the-command-line-with-git">Question 6: Do you use the command line with Git?</h2>
 <p><a href="https://www.codecademy.com/learn/learn-the-command-line">The command line</a> (CLI) is a text interface for the computer’s operating system. It's a useful tool for developers to work with system files, among other tasks. Git can be used with graphical user interfaces (GUIs), like GitHub, or it can be used with the command line. All Git commands are able to run on the command line. However, this is not the case for GUIs. So even if you don’t know Git all that well, having proficiency with the command line is a beneficial skillset to show interviewers that you have the capability to, at the very least, work with Git.</p>
-<h3 id="question-7-when-should-you-use-git-push-compared-to-when-you-use-git-pull">Question 7: When should you use git push, compared to when you use git pull?</h3>
+<h2 id="question-7-when-should-you-use-git-push-compared-to-when-you-use-git-pull">Question 7: When should you use git push, compared to when you use git pull?</h2>
 <ul>
 <li><code>git push</code> can update remote refs using local refs.</li>
 <li><code>git pull</code> can request a summary of pending changes.</li>
 </ul>
 <p>If you would like to read up on answering technical interview questions, go ahead and jump over to this <a href="https://www.codecademy.com/resources/blog/technical-interview-guide/">complete guide</a>.</p>
-<h3 id="question-8-what-command-do-you-use-to-call-an-older-version">Question 8: What command do you use to call an older version?</h3>
+<h2 id="question-8-what-command-do-you-use-to-call-an-older-version">Question 8: What command do you use to call an older version?</h2>
 <p>To return to a previous version, you will first want to run <code>git hist</code> to pull up the branch's history. Then, after identifying the version's hash you want to go to, use the <code>git checkout</code> command to call the previous commit.</p>
-<h3 id="question-9-has-there-ever-been-a-time-when-you-worked-from-multiple-machines-or-with-multiple-developers-how-did-you-like-it-what-did-you-find-most-challenging">Question 9: Has there ever been a time when you worked from multiple machines or with multiple developers? How did you like it? What did you find most challenging?</h3>
+<h2 id="question-9-has-there-ever-been-a-time-when-you-worked-from-multiple-machines-or-with-multiple-developers-how-did-you-like-it-what-did-you-find-most-challenging">Question 9: Has there ever been a time when you worked from multiple machines or with multiple developers? How did you like it? What did you find most challenging?</h2>
 <p>To answer this question, you can talk about your workflow. For example, explain how you’ve used Git in the past as your version control system for working between machines or to share with multiple developers.</p>
-<h3 id="question-10-talk-about-methods-you-use-to-clean-up-your-feature-branches">Question 10: Talk about methods you use to clean up your feature branches.</h3>
+<h2 id="question-10-talk-about-methods-you-use-to-clean-up-your-feature-branches">Question 10: Talk about methods you use to clean up your feature branches.</h2>
 <ul>
 <li><code>git merge --squash</code> is a command that can merge multiple commits of a branch.</li>
 <li><code>git commit --fixup</code> marks the commit as a fix of the previous commit.</li>
 <li><code>git rebase -i --autosquash</code> is a rebase type of squash for merging multiple commits.</li>
 </ul>
-<h3 id="question-11-what-are-git-attributes-used-for">Question 11: What are Git attributes used for?</h3>
+<h2 id="question-11-what-are-git-attributes-used-for">Question 11: What are Git attributes used for?</h2>
 <p>Git attributes allow programmers to try different merge strategies within the files or directories of a project. Attributes are set on paths so that when certain settings are applied along the path, the attribute can perform requests. Git attributes can also, among other things, perform requests when exporting your project.</p>
-<h3 id="question-12-have-you-ever-done-debugging-with-git-how-did-you-do-this">Question 12: Have you ever done debugging with Git? How did you do this?</h3>
+<h2 id="question-12-have-you-ever-done-debugging-with-git-how-did-you-do-this">Question 12: Have you ever done debugging with Git? How did you do this?</h2>
 <ul>
 <li><code>git bisect</code> identifies the first commit to introduce a bug by using automatic binary search.</li>
 <li><code>git blame</code> identifies the author of a commit.</li>
 <li><code>git grep</code> searches for any string or regular expression in any of the files in the staging area.</li>
 </ul>
-<h3 id="question-13-have-you-ever-encountered-a-merge-conflict-how-did-you-go-about-resolving-it">Question 13: Have you ever encountered a merge conflict? How did you go about resolving it?</h3>
+<h2 id="question-13-have-you-ever-encountered-a-merge-conflict-how-did-you-go-about-resolving-it">Question 13: Have you ever encountered a merge conflict? How did you go about resolving it?</h2>
 <p>Merge conflicts can be resolved by, first, editing the file that has the conflict. And once the edits get made, add and commit the file.</p>
 <blockquote>
 <p>“Merge conflicts happen when you merge branches that have competing commits, and Git needs your help to decide which changes to incorporate in the final merge.” - <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts">GitHub article about merge conflicts</a></p>
 </blockquote>
-<h3 id="question-14-explain-git-hooks">Question 14: Explain Git hooks.</h3>
+<h2 id="question-14-explain-git-hooks">Question 14: Explain Git hooks.</h2>
 <p>Git hooks are custom scripts that can run when certain actions occur. There are two types: client-side hooks and server-side hooks. Git hooks can be written in any scripting programming language. They should be located within the hooks subdirectory of the .git directory.</p>
-<h3 id="question-15-what-is-your-git-workflow-like">Question 15: What is your Git workflow like?</h3>
+<h2 id="question-15-what-is-your-git-workflow-like">Question 15: What is your Git workflow like?</h2>
 <p>Some programmers use Git every day, and some do not use it at all. It can depend on the project and team size, but you should be using Git just about every day that you program, in an ideal world. So, modeling your workflow around Git is a great practice to have.
 One of the best tips we can give you regarding the VCS is to continuously communicate with team members to ensure everyone follows the same Git conventions. Also, remember to explain your workflow for all Git interview questions and answers.</p>
 <h2 id="expand-your-coding-resources-by-learning-with-our-courses">Expand your coding resources by learning with our courses</h2>
