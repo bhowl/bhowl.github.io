@@ -52,6 +52,11 @@ h3{
 
 ul{
     list-style: none;
+    font-size: 14px;
+}
+
+ol{
+    font-size: 14px;
 }
 
 strong{
