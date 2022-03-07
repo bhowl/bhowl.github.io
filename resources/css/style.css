@@ -69,6 +69,10 @@ li{
     font-size: 14px;
 }
 
+li::marker{
+    font-size: 14px;
+}
+
 footer{
     display: flex;
     justify-content: center;
