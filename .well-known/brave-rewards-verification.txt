@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: bradleyhh.github.io
+Token: dcd21f356d7a1f11cb79f7e5395c286389177180e2db032dfe0922a4311379cd
