@@ -1,1 +1,1 @@
-Static portfolio webpage 
+Static portfolio webpage using semantic HTML and CSS flexbox.
