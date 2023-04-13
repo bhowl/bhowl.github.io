@@ -1,0 +1,113 @@
+@font-face {
+	font-family: Lato;
+	src: url('/fonts/lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Ubuntu;
+	src: url('/fonts/ubuntu/UbuntuMono-Regular.ttf') format('truetype');
+}
+
+:root {
+	--space: 12px;
+	font-family: 'Lato';
+	--font-size: 16px;
+	--code-color: whitesmoke;
+}
+
+body {
+	padding: var(--space);
+	background-color: white;
+	margin: 0;
+}
+
+code {
+	font-family: 'Ubuntu';
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--space);
+}
+
+h1 {
+	margin: 0 0 var(--space) 0;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	max-width: 100%;
+}
+
+li {
+	font-size: var(--font-size);
+}
+
+li code {
+	background-color: var(--code-color);
+	padding: calc(var(--space) / 4);
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 0 var(--space) 0;
+	padding: 0;
+}
+
+.nav li {
+	margin: 0 calc(var(--space) / 2) 0 0;
+}
+
+#orange:hover {
+	color: rgba(248, 175, 66, 0.904);
+	transition: all 1s ease-out;
+}
+
+#blue:hover {
+	color: rgb(1, 139, 252);
+	transition: all 1s ease-out;
+}
+
+p {
+	font-size: var(--font-size);
+}
+
+p code {
+	background-color: var(--code-color);
+	padding: calc(var(--space) / 4);
+}
+
+pre {
+	background-color: var(--code-color);
+	padding: calc(var(--space) / 2);
+	overflow: scroll;
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		max-width: 800px;
+	}
+}
