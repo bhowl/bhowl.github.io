@@ -1,0 +1,143 @@
+{
+  "entries": {
+    "burghardt2019skeletal": {
+      "bibtex-type": "article",
+      "title": "Skeletal muscle DNA methylation modifications and psychopharmacologic treatment in bipolar disorder",
+      "author": ["Burghardt, Kyle J", "Howlett, Bradley H", "Sanders, Elani", "Dass, Sabrina E", "Msallaty, Zaher", "Mallisho, Abduallah", "Seyoum, Berhane", "Yi, Zhengping"],
+      "journal": "European Neuropsychopharmacology",
+      "volume": "29",
+      "number": "12",
+      "pages": "1365–1373",
+      "year": 2019,
+      "publisher": "Elsevier"
+    },
+    "burghardt2018atypical": {
+      "bibtex-type": "article",
+      "title": "Atypical antipsychotics and the human skeletal muscle lipidome",
+      "author": ["Burghardt, Kyle J", "Ward, Kristen M", "Sanders, Elani J", "Howlett, Bradley H", "Seyoum, Berhane", "Yi, Zhengping"],
+      "journal": "Metabolites",
+      "volume": "8",
+      "number": "4",
+      "pages": "64",
+      "year": 2018,
+      "publisher": "MDPI"
+    },
+    "burghardt2020bibliometric": {
+      "bibtex-type": "article",
+      "title": "A bibliometric analysis of the top 50 NIH-Funded colleges of pharmacy using two databases",
+      "author": ["Burghardt, Kyle J", "Howlett, Bradley H", "Fern, Stephanie M", "Burghardt, Paul R"],
+      "journal": "Research in Social and Administrative Pharmacy",
+      "volume": "16",
+      "number": "7",
+      "pages": "941–948",
+      "year": 2020,
+      "publisher": "Elsevier"
+    },
+    "bagley2020epigenetic": {
+      "bibtex-type": "article",
+      "title": "Epigenetic responses to acute resistance exercise in trained vs. sedentary men",
+      "author": ["Bagley, James R", "Burghardt, Kyle J", "McManus, Ryan", "Howlett, Bradley", "Costa, Pablo B", "Coburn, Jared W", "Arevalo, Jose A", "Malek, Moh H", "Galpin, Andrew J"],
+      "journal": "The Journal of Strength & Conditioning Research",
+      "volume": "34",
+      "number": "6",
+      "pages": "1574–1580",
+      "year": 2020,
+      "publisher": "LWW"
+    },
+    "leshcorncpnp": {
+      "bibtex-type": "article",
+      "title": "CPNP 2019 Annual Meeting Poster Abstracts",
+      "author": ["Leshcorn, MBA", "Hebbard, Amy"]
+    },
+    "kyle2020three": {
+      "bibtex-type": "article",
+      "title": "Three Commonly Utilized Scholarly Databases and a Social Network Site Provide Different, But Related, Metrics of Pharmacy Faculty Publication",
+      "author": ["Kyle J. Burghardt", "Bradley H. Howlett", "Audrey S. Khoury", "Stephanie M. Fern", "Paul R. Burghardt"],
+      "journal": "MDPI",
+      "volume": "8",
+      "number": "18",
+      "year": 2020,
+      "publisher": "MDPI"
+    },
+    "burghardt2021bibliometric": {
+      "bibtex-type": "article",
+      "title": "Bibliometric data based on the Pharm. D. and Ph. D. degree in United States research-intensive colleges of pharmacy",
+      "author": ["Burghardt, Kyle J", "Howlett, Bradley H", "Khoury, Audrey S", "Fern, Stephanie M", "Burghardt, Paul R"],
+      "journal": "International Journal of Pharmacy Practice",
+      "volume": "29",
+      "number": "1",
+      "pages": "78–83",
+      "year": 2021,
+      "publisher": "Oxford University Press UK"
+    },
+    "burghardt2021personal": {
+      "bibtex-type": "article",
+      "title": "Personal genotyping and student outcomes in genetic and pharmacogenetic teaching: a systematic review and meta-analysis",
+      "author": ["Burghardt, Kyle J", "Ward, Kristen M", "Howlett, Bradley H", "Burghardt, Paul R"],
+      "journal": "Pharmacogenomics",
+      "volume": "22",
+      "number": "7",
+      "pages": "423–433",
+      "year": 2021,
+      "publisher": "Future Medicine Ltd London, UK"
+    },
+    "burghardt2020olanzapine": {
+      "bibtex-type": "inproceedings",
+      "title": "Olanzapine Increases Skeletal Muscle DNA 5-hydroxymethylation in Healthy Volunteers",
+      "author": ["Burghardt, Kyle", "Yi, Zhengping", "Seyoum, Berhane", "Howlett, Bradley"],
+      "booktitle": "2020 ACCP VIRTUAL Annual Meeting (October 19-30)",
+      "year": 2020,
+      "organization": "American College of Clinical Pharmacy"
+    },
+    "howlett2022dna": {
+      "bibtex-type": "incollection",
+      "title": "DNA methylation in bipolar disorder",
+      "author": ["Howlett, Bradley H", "Kassa, Marissa A", "Burghardt, Kyle J"],
+      "booktitle": "Biomarkers in Bipolar Disorder",
+      "pages": "267",
+      "year": 2022,
+      "publisher": "Elsevier"
+    },
+    "burghardt2022profiling": {
+      "bibtex-type": "article",
+      "title": "Profiling the Skeletal Muscle Proteome in Patients on Atypical Antipsychotics and Mood Stabilizers",
+      "author": ["Burghardt, K.J.", "Calme, G.", "Caruso, M.", "Howlett, B.H.", "Sanders, E.", "Msallaty, Z.", "Mallisho, A.", "Seyoum, B.", "Qi, Y.A.", "Zhang, X.", "others"],
+      "journal": "Brain Sciences",
+      "volume": "12",
+      "number": "259",
+      "year": 2022,
+      "publisher": "MDPI"
+    },
+    "mossa2024comparison": {
+      "bibtex-type": "article",
+      "title": "Comparison of brain imaging and physical health between research and clinical neuroimaging cohorts of ageing",
+      "author": ["Mossa-Basha, Mahmud", "Andre, Jalal B", "Yuh, Esther", "Hunt, David", "LaPiana, Nina", "Howlett, Bradley", "Krakauer, Chloe", "Crane, Paul", "Nelson, Jennifer", "DeZelar, Margaret", "others"],
+      "journal": "British Journal of Radiology",
+      "volume": "97",
+      "number": "1155",
+      "pages": "614–621",
+      "year": 2024,
+      "publisher": "Oxford University Press"
+    },
+    "chang2023advanced": {
+      "bibtex-type": "inproceedings",
+      "title": "Advanced Diffusion MRI Modeling Sheds Light on FLAIR White Matter Hyperintensities in an Aging Cohort",
+      "author": ["Chang, Kelly", "Burke, Luke", "LaPiana, Nina", "Howlett, Bradley", "Hunt, David", "Dezelar, Margaret", "Andre, Jalal B", "Ralston, James", "Rokem, Ariel", "Donald, Christine Mac"],
+      "booktitle": "International Workshop on Computational Diffusion MRI",
+      "pages": "192–203",
+      "year": 2023,
+      "organization": "Springer"
+    },
+    "burghardt2024alterations": {
+      "bibtex-type": "article",
+      "title": "Alterations in Skeletal Muscle Insulin Signaling DNA Methylation: A Pilot Randomized Controlled Trial of Olanzapine in Healthy Volunteers",
+      "author": ["Burghardt, Kyle J", "Burghardt, Paul R", "Howlett, Bradley H", "Dass, Sabrina E", "Zahn, Brent", "Imam, Ahmad A", "Mallisho, Abdullah", "Msallaty, Zaher", "Seyoum, Berhane", "Yi, Zhengping"],
+      "journal": "Biomedicines",
+      "volume": "12",
+      "number": "5",
+      "pages": "1057",
+      "year": 2024,
+      "publisher": "MDPI"
+    }
+  }
+}

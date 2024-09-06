@@ -1,1 +1,1 @@
-Static portfolio webpage using semantic HTML and CSS flexbox.
+A portfolio webpage using semantic HTML, CSS flexbox, vanilla JS, and XML (XSLT).

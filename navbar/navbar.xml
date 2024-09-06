@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="navbar.xslt" type="text/xsl"?>
+<navbar>
+  <!-- html loaded in from xslt -->
+</navbar>
