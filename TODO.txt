@@ -1,3 +1,11 @@
-Add unique xml pages that contain specific content per webpage to fill body of index.html - conditional on the page the user is on??
+Create html from xml (for navbar and logo): see 4-building content from xml
 
+Center all html-pages depending on screen (padding?)
 
+Once this git branch is updated; make head (clear history)
+
+Have a cv/logs with dates but current orcid.xml is not dated
+
+Move research_publications to index but keep tech_writing/blog on separate page
+
+Create living resume/cv doc with multiple file types and easy conversion from txt to pdf (no pictures)
