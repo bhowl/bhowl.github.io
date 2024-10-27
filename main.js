@@ -1,7 +1,7 @@
 async function loadXMLDoc(docURL) {
     let doc = await fetch(docURL);
     let response = await doc.text();
-    let xml = new DOMParser().parseFromString(response, "text/xml");
+    let xml = new DOMParser().parseFromString(response, "application/xml");
     return xml;
 }
 
@@ -27,6 +27,60 @@ async function applyXSLTTransformation(xmlFile, xsltFile, outputElementId) {
     document.getElementById(outputElementId).appendChild(transformedDoc);
 }
 
+// Call this function to apply the transformation
+applyXSLTTransformation("shared/logo.xml", "shared/logo.xslt", "logo");
+applyXSLTTransformation("cv/orcid.xml", "cv/orcid.xslt", "publication");
+applyXSLTTransformation("shared/navbar.xml", "shared/navbar.xslt", "navbar");
+
+
+
+
+
+
+// function loadXMLDoc(filename)
+// {
+// 	if (window.ActiveXObject)
+// 	{
+// 		xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+// 	}
+// 	else
+// 	{
+// 		xhttp = new XMLHttpRequest();
+// 	}
+// 	xhttp.open("GET", filename, false);
+// 	try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+// 	xhttp.send("");
+// 	return xhttp.responseXML;
+// }
+
+// function displayResult()
+// {
+// 	xml = loadXMLDoc("orcid.xml");
+// 	xsl = loadXMLDoc("pub.xslt");
+// 	// code for IE
+// 	if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+// 	{
+// 		ex = xml.transformNode(xsl);
+// 		document.getElementById("publication").innerHTML = ex;
+// 	}
+// 	// code for Chrome, Firefox, Opera, etc.
+// 	else if (document.implementation && document.implementation.createDocument)
+// 	{
+// 		xsltProcessor = new XSLTProcessor();
+// 		xsltProcessor.importStylesheet(xsl);
+// 		resultDocument = xsltProcessor.transformToFragment(xml, document);
+// 		document.getElementById("publication").appendChild(resultDocument);
+// 	}
+// }
+// displayResult
+
+
+
+
+
+
+
+
 // // Define the namespace resolver function
 // const nsResolver = (prefix) => {
 //     const namespaces = {
@@ -37,64 +91,64 @@ async function applyXSLTTransformation(xmlFile, xsltFile, outputElementId) {
 //     return namespaces[prefix] || null;
 // };
 
-function createPubSection(node) {
-    // Create a new <div> for a single publication
-    var pubSection = document.createElement("div");
-    pubSection.setAttribute("class", "Publication");
+// function createPubSection(node) {
+//     // Create a new <div> for a single publication
+//     var pubSection = document.createElement("div");
+//     pubSection.setAttribute("class", "Publication");
 
-    // Check if the node has a text child node (if it's not a text node, find the text content)
-    var pubTitle = node.textContent.trim(); // Safely get the text content
+//     // Check if the node has a text child node (if it's not a text node, find the text content)
+//     var pubTitle = node.textContent.trim(); // Safely get the text content
 
-    if (pubTitle) {
-        var pubStr = document.createTextNode(pubTitle);
-        pubSection.appendChild(pubStr);
-    } else {
-        console.error("No text content found for the node.");
-    }
+//     if (pubTitle) {
+//         var pubStr = document.createTextNode(pubTitle);
+//         pubSection.appendChild(pubStr);
+//     } else {
+//         console.error("No text content found for the node.");
+//     }
 
-    return pubSection;
-}
+//     return pubSection;
+// }
 
-function createPubElement() {
-    // Get references to the data island (XML data) and process it
-    loadXMLDoc("cv/orcid.xml").then((xmlData) => {
-        var expr = "/*[local-name()='record' and namespace-uri()='http://www.orcid.org/ns/record']" +
-        "/*[local-name()='activities-summary']" +
-        "/*[local-name()='works']" +
-        "/*[local-name()='group']" +
-        "/*[local-name()='work-summary' and namespace-uri()='http://www.orcid.org/ns/work']" +
-        "/*[local-name()='title']";
+// function createPubElement() {
+//     // Get references to the data island (XML data) and process it
+//     loadXMLDoc("cv/orcid.xml").then((xmlData) => {
+//         var expr = "/*[local-name()='record' and namespace-uri()='http://www.orcid.org/ns/record']" +
+//         "/*[local-name()='activities-summary']" +
+//         "/*[local-name()='works']" +
+//         "/*[local-name()='group']" +
+//         "/*[local-name()='work-summary' and namespace-uri()='http://www.orcid.org/ns/work']" +
+//         "/*[local-name()='title']";
 
-        // Use XPath to get publication titles
-        var result = document.evaluate(
-            expr,
-            xmlData,
-            null,
-            XPathResult.ANY_TYPE
-        );
+//         // Use XPath to get publication titles
+//         var result = document.evaluate(
+//             expr,
+//             xmlData,
+//             null,
+//             XPathResult.ANY_TYPE
+//         );
 
-        var node = result.iterateNext();
-        while (node) {
-            // Create a new <div> for the whole publication entry
-            var newDiv = document.createElement("div");
-            newDiv.setAttribute("class", "Publication");
+//         var node = result.iterateNext();
+//         while (node) {
+//             // Create a new <div> for the whole publication entry
+//             var newDiv = document.createElement("div");
+//             newDiv.setAttribute("class", "Publication");
 
-            // Now create a <div> for the publication section and append it
-            var newPub = createPubSection(node);
-            newDiv.appendChild(newPub);
+//             // Now create a <div> for the publication section and append it
+//             var newPub = createPubSection(node);
+//             newDiv.appendChild(newPub);
 
-            // Add the new <div> containing the publication info to the web page
-            document.getElementById("publication").appendChild(newDiv);
+//             // Add the new <div> containing the publication info to the web page
+//             document.getElementById("publication").appendChild(newDiv);
 
-            // Get the next element in the result set
-            node = result.iterateNext();
-        }
-    });
-}
+//             // Get the next element in the result set
+//             node = result.iterateNext();
+//         }
+//     });
+// }
 
-window.addEventListener("load", function () {
-    document.getElementById("loadPublications").addEventListener("click", createPubElement);
-});
+// window.addEventListener("load", function () {
+//     document.getElementById("loadPublications").addEventListener("click", createPubElement);
+// });
 
 // var Publication;
 // function showPublication() {
@@ -124,7 +178,14 @@ window.addEventListener("load", function () {
 //     });
 // });
 
-// Call this function to apply the transformation
-applyXSLTTransformation("shared/logo.xml", "shared/logo.xslt", "logo");
-applyXSLTTransformation("shared/navbar.xml", "shared/navbar.xslt", "navbar");
-//applyXSLTTransformation("shared/publications.xml","shared/publications.xslt", "publications");
+// function xmlhttprequest() {
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById("demo").innerHTML =
+//       this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "TODO.txt", true);
+//   xhttp.send();
+// }
